@@ -1,0 +1,30 @@
+﻿@model AgendaContatos.Models.Contato
+
+
+
+<h1>Deletar Contato</h1>
+
+<h3>Você tem certeza que quer deletar esse contato: @Html.DisplayFor(model => model.Name)?</h3>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sim" class="stylebutton"/> 
+        <a asp-action="Index"><input type="button" value="Não" class="stylebutton"/></a>
+    </form>
+</div>
+
+<style>
+    .stylebutton{
+        background-color: white;
+    color:black; 
+    border-radius: 10px;
+    padding: 2px;
+    width: 300px;}
+    .stylebutton:hover,
+    .stylebutton:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+</style>
+
